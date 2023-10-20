@@ -14,13 +14,13 @@ RUN cd /var/www/html
 RUN wget https://github.com/Phatcm/jupiter/archive/refs/heads/master.zip
 
 # unzip folder
-RUN unzip jupiter-master.zip
+RUN unzip master.zip
 
 # copy files into html directory
 RUN cp -r jupiter-master/* /var/www/html/
 
 # remove unwanted folder
-RUN rm -rf jupiter-master jupiter-master.zip
+RUN rm -rf jupiter-master master.zip
 
 # exposes port 80 on the container
 EXPOSE 80
